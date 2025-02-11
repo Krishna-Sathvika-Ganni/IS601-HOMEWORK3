@@ -1,12 +1,31 @@
-def add(x,y):
-    return x + y
+from calculator.operations import add, subtract, multiply, divide
 
-def subtract(x,y):
-    return x - y
+class Calculation:
+    def __init__(self, x, y, Operation):
+        self.x=x
+        self.y=y
+        self.Operation=Operation
 
-def multiply(x,y):
-    return x * y
-
-def divide(x,y):
-    return x / y
-
+    def get_result(self):
+        return self.operation(self.x, self.y)
+    
+class Calculator:
+    @staticmethod
+    def add(x,y):
+        cal=Calculation(x, y, add)
+        return cal.get_result()
+    
+    @staticmethod
+    def subtract(x,y):
+        cal=Calculation(x, y, subtract)
+        return cal.get_result()
+    
+    @staticmethod
+    def multiply(x,y):
+        cal=Calculation(x, y, multiply)
+        return cal.get_result()
+    
+    @staticmethod
+    def divide(x,y):
+        cal=Calculation(x, y, divide)
+        return cal.get_result()
