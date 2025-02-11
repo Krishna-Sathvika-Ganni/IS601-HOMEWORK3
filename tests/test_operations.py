@@ -17,7 +17,7 @@ def test_operation_multiply():
 
 def test_operation_divide():
     calculation = Calculation(Decimal('39'), Decimal('3'), divide)
-    assert calculation.perform() == Decimal('12'), "Division operation failed"
+    assert calculation.perform() == Decimal('12'), f"Division operation failed"
 
 def test_divide_by_zero():
     with pytest.raises(ValueError, match="Cannot be divided by Zero"):
