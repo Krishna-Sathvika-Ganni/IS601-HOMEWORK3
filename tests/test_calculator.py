@@ -2,19 +2,23 @@
 from calculator import Calculator
 
 def test_addition():
-    '''Test that addition function works '''    
-    assert Calculator.add(5,2) == 7
+    '''Test that addition function works '''  
+    cal=Calculator()  
+    assert cal.add(5,2) == 7
 
 def test_subtraction():
-    '''Test that subtraction function works '''    
-    assert Calculator.subtract(3,2) == 1
+    '''Test that subtraction function works '''   
+    cal=Calculator()  
+    assert cal.subtract(3,2) == 1
 
 def test_multiplication():
     '''Test that Multiplication function works'''
-    assert Calculator.multiply(3,4) == 12
+    cal=Calculator() 
+    assert cal.multiply(3,4) == 12
 
 def test_division():
     '''Test that Division function works'''
-    assert Calculator.divide(10,5) == 2
+    cal=Calculator() 
+    assert cal.divide(10,5) == 2
 
 #End
