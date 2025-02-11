@@ -8,7 +8,7 @@ from calculator.operations import add, subtract
 def setup_calculations():
     Calculations.clear_history()
     Calculations.add_calculation(Calculation(Decimal('29'), Decimal('13'), add))
-    Calculations.subtract_calculation(Calculation(Decimal('29'), Decimal('25'), subtract))
+    Calculations.add_calculation(Calculation(Decimal('29'), Decimal('25'), subtract))
 
 def test_add_calculation(setup_calculations):
     Cal=Calculation(Decimal('3'), Decimal('2'), add)
