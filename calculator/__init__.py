@@ -1,10 +1,10 @@
 from calculator.operations import add, subtract, multiply, divide
 
 class Calculation:
-    def __init__(self, x, y, Operation):
+    def __init__(self, x, y, operation):
         self.x=x
         self.y=y
-        self.Operation=Operation
+        self.operation=operation
 
     def get_result(self):
         return self.operation(self.x, self.y)
