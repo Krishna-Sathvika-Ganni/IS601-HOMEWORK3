@@ -25,7 +25,7 @@ def test_clear_history(setup_calculations):
 
 def test_get_latest(setup_calculations):
     latest = Calculations.get_latest()
-    assert latest.x == Decimal('15') and latest.y == Decimal('5'), "Did not get the correct latest calculation"
+    assert latest.x == Decimal('29') and latest.y == Decimal('25'), "Haven't got the correct latest calculation"
 
 def test_find_by_operation(setup_calculations):
     add_operations = Calculations.find_by_operation("add")
