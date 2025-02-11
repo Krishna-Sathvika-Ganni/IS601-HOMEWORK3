@@ -24,5 +24,5 @@ def test_calculation_repr():
 
 def test_divide_by_zero():
     Cal=Calculation(Decimal('15'), Decimal('0'), divide)
-    with pytest.raises(ValueError, match="Division by zero cannot be done"):
+    with pytest.raises(ValueError, match="Cannot be divided by Zero"):
         Cal.perform()
