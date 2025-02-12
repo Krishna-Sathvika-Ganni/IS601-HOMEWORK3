@@ -1,5 +1,5 @@
 '''The test_calculation.py module contains tests for the calculator operations and calculation class'''
-# pylint: disable=invalid-name
+# pylint: disable=unnecessary-dunder-call, invalid-name
 from decimal import Decimal
 import pytest
 from calculator.calculation import Calculation
