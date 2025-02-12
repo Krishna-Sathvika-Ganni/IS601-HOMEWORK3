@@ -1,0 +1,98 @@
+-> pytest
+
+(my_env) krishnasathvikaganni@krishnas-MacBook-Air 3_LEVELS_OF_CALCULATOR % pytest
+========================================================================== test session starts ==========================================================================
+platform darwin -- Python 3.13.1, pytest-8.2.0, pluggy-1.5.0 -- /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR/my_env/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-6.0.0, pylint-0.21.0
+collected 8 items                                                                                                                                                       
+
+tests/test_calculations.py::test_addition PASSED                                                                                                                  [ 12%]
+tests/test_calculations.py::test_subtraction PASSED                                                                                                               [ 25%]
+tests/test_calculations.py::test_multiplication PASSED                                                                                                            [ 37%]
+tests/test_calculations.py::test_division PASSED                                                                                                                  [ 50%]
+tests/test_calculator.py::test_addition PASSED                                                                                                                    [ 62%]
+tests/test_calculator.py::test_subtraction PASSED                                                                                                                 [ 75%]
+tests/test_calculator.py::test_multiplication PASSED                                                                                                              [ 87%]
+tests/test_calculator.py::test_division PASSED                                                                                                                    [100%]
+
+=========================================================================== 8 passed in 0.10s ===========================================================================
+
+
+-> pytest --pylint
+
+(my_env) krishnasathvikaganni@krishnas-MacBook-Air 3_LEVELS_OF_CALCULATOR % pytest --pylint
+/Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR/my_env/lib/python3.13/site-packages/pytest_pylint/plugin.py:223: PytestRemovedIn9Warning: The (path: py.path.local) argument is deprecated, please use (file_path: pathlib.Path)
+see https://docs.pytest.org/en/latest/deprecations.html#py-path-local-arguments-for-hooks-replaced-with-pathlib-path
+  def pytest_collect_file(self, path, parent):
+========================================================================== test session starts ==========================================================================
+platform darwin -- Python 3.13.1, pytest-8.2.0, pluggy-1.5.0 -- /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR/my_env/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-6.0.0, pylint-0.21.0
+collected 11 items                                                                                                                                                      
+--------------------------------------------------------------------------------
+Linting files
+.......
+--------------------------------------------------------------------------------
+
+tests/__init__.py::PYLINT SKIPPED (file(s) previously passed pylint checks)                                                                                       [  9%]
+tests/test_calculations.py::PYLINT PASSED                                                                                                                         [ 18%]
+tests/test_calculations.py::test_addition PASSED                                                                                                                  [ 27%]
+tests/test_calculations.py::test_subtraction PASSED                                                                                                               [ 36%]
+tests/test_calculations.py::test_multiplication PASSED                                                                                                            [ 45%]
+tests/test_calculations.py::test_division PASSED                                                                                                                  [ 54%]
+tests/test_calculator.py::PYLINT PASSED                                                                                                                           [ 63%]
+tests/test_calculator.py::test_addition PASSED                                                                                                                    [ 72%]
+tests/test_calculator.py::test_subtraction PASSED                                                                                                                 [ 81%]
+tests/test_calculator.py::test_multiplication PASSED                                                                                                              [ 90%]
+tests/test_calculator.py::test_division PASSED                                                                                                                    [100%]
+
+===================================================================== 10 passed, 1 skipped in 0.49s =====================================================================
+
+
+-> pytest --pylint --cov
+
+(my_env) krishnasathvikaganni@krishnas-MacBook-Air 3_LEVELS_OF_CALCULATOR % pytest --pylint --cov
+/Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR/my_env/lib/python3.13/site-packages/pytest_pylint/plugin.py:223: PytestRemovedIn9Warning: The (path: py.path.local) argument is deprecated, please use (file_path: pathlib.Path)
+see https://docs.pytest.org/en/latest/deprecations.html#py-path-local-arguments-for-hooks-replaced-with-pathlib-path
+  def pytest_collect_file(self, path, parent):
+========================================================================== test session starts ==========================================================================
+platform darwin -- Python 3.13.1, pytest-8.2.0, pluggy-1.5.0 -- /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR/my_env/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-6.0.0, pylint-0.21.0
+collected 11 items                                                                                                                                                      
+
+tests/__init__.py::PYLINT SKIPPED (file(s) previously passed pylint checks)                                                                                       [  9%]
+tests/test_calculations.py::PYLINT SKIPPED (file(s) previously passed pylint checks)                                                                              [ 18%]
+tests/test_calculations.py::test_addition PASSED                                                                                                                  [ 27%]
+tests/test_calculations.py::test_subtraction PASSED                                                                                                               [ 36%]
+tests/test_calculations.py::test_multiplication PASSED                                                                                                            [ 45%]
+tests/test_calculations.py::test_division PASSED                                                                                                                  [ 54%]
+tests/test_calculator.py::PYLINT SKIPPED (file(s) previously passed pylint checks)                                                                                [ 63%]
+tests/test_calculator.py::test_addition PASSED                                                                                                                    [ 72%]
+tests/test_calculator.py::test_subtraction PASSED                                                                                                                 [ 81%]
+tests/test_calculator.py::test_multiplication PASSED                                                                                                              [ 90%]
+tests/test_calculator.py::test_division PASSED                                                                                                                    [100%]
+
+---------- coverage: platform darwin, python 3.13.1-final-0 ----------
+Name                         Stmts   Miss  Cover
+------------------------------------------------
+calculator/__init__.py          25      0   100%
+calculator/operations.py         8      0   100%
+tests/__init__.py                0      0   100%
+tests/test_calculations.py       9      0   100%
+tests/test_calculator.py         9      0   100%
+------------------------------------------------
+TOTAL                           51      0   100%
+
+
+===================================================================== 8 passed, 3 skipped in 0.45s ======================================================================
