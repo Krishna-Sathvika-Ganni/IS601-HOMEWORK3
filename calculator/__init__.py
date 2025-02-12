@@ -7,22 +7,22 @@ from typing import Callable
 class Calculator:
     @staticmethod
     def _perform_operation(x: Decimal, y: Decimal, operation: Callable[[Decimal, Decimal], Decimal]) -> Decimal:
-        cal=Calculation.create(x, y, operation)
+        calculation=Calculation.create(x, y, operation)
         Calculations.add_calculation(calculation)
-        return cal.perform()
+        return calculation.perform()
 
     @staticmethod
     def add(x: Decimal,y: Decimal) -> Decimal:
-        return cal._perform_operation(x, y, add)
+        return Calculation._perform_operation(x, y, add)
     
     @staticmethod
     def subtract(x: Decimal,y: Decimal) -> Decimal:
-        return cal._perform_operation(x, y, subtract)
+        return Calculation._perform_operation(x, y, subtract)
     
     @staticmethod
     def multiply(x: Decimal,y: Decimal) -> Decimal:
-        return cal._perform_operation(x, y, multiply)
+        return Calculation._perform_operation(x, y, multiply)
     
     @staticmethod
     def divide(x: Decimal,y: Decimal) -> Decimal:
-        return cal._perform_operation(x, y, divide)
+        return Calculation._perform_operation(x, y, divide)
