@@ -1,0 +1,157 @@
+-> pytest
+
+(my_env) krishnasathvikaganni@krishnas-MacBook-Air 3_LEVELS_OF_CALCULATOR % pytest
+========================================================================== test session starts ==========================================================================
+platform darwin -- Python 3.13.1, pytest-8.2.0, pluggy-1.5.0 -- /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR/my_env/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-6.0.0, pylint-0.21.0
+collected 25 items                                                                                                                                                      
+
+tests/test_calculation.py::test_calculation_operations[x0-y0-add-expected0] PASSED                                                                                [  4%]
+tests/test_calculation.py::test_calculation_operations[x1-y1-subtract-expected1] PASSED                                                                           [  8%]
+tests/test_calculation.py::test_calculation_operations[x2-y2-multiply-expected2] PASSED                                                                           [ 12%]
+tests/test_calculation.py::test_calculation_operations[x3-y3-divide-expected3] PASSED                                                                             [ 16%]
+tests/test_calculation.py::test_calculation_operations[x4-y4-add-expected4] PASSED                                                                                [ 20%]
+tests/test_calculation.py::test_calculation_operations[x5-y5-subtract-expected5] PASSED                                                                           [ 24%]
+tests/test_calculation.py::test_calculation_operations[x6-y6-multiply-expected6] PASSED                                                                           [ 28%]
+tests/test_calculation.py::test_calculation_operations[x7-y7-divide-expected7] PASSED                                                                             [ 32%]
+tests/test_calculation.py::test_calculation_repr PASSED                                                                                                           [ 36%]
+tests/test_calculation.py::test_divide_by_zero PASSED                                                                                                             [ 40%]
+tests/test_calculations.py::test_add_calculation PASSED                                                                                                           [ 44%]
+tests/test_calculations.py::test_get_history PASSED                                                                                                               [ 48%]
+tests/test_calculations.py::test_clear_history PASSED                                                                                                             [ 52%]
+tests/test_calculations.py::test_get_latest PASSED                                                                                                                [ 56%]
+tests/test_calculations.py::test_find_by_operation PASSED                                                                                                         [ 60%]
+tests/test_calculations.py::test_get_latest_with_empty_history PASSED                                                                                             [ 64%]
+tests/test_calculator.py::test_addition PASSED                                                                                                                    [ 68%]
+tests/test_calculator.py::test_subtraction PASSED                                                                                                                 [ 72%]
+tests/test_calculator.py::test_multiplication PASSED                                                                                                              [ 76%]
+tests/test_calculator.py::test_division PASSED                                                                                                                    [ 80%]
+tests/test_operations.py::test_operation_add PASSED                                                                                                               [ 84%]
+tests/test_operations.py::test_operation_subtract PASSED                                                                                                          [ 88%]
+tests/test_operations.py::test_operation_multiply PASSED                                                                                                          [ 92%]
+tests/test_operations.py::test_operation_divide PASSED                                                                                                            [ 96%]
+tests/test_operations.py::test_divide_by_zero PASSED                                                                                                              [100%]
+
+========================================================================== 25 passed in 0.46s ===========================================================================
+
+
+-> pytest --pylint
+
+(my_env) krishnasathvikaganni@krishnas-MacBook-Air 3_LEVELS_OF_CALCULATOR % pytest --pylint
+/Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR/my_env/lib/python3.13/site-packages/pytest_pylint/plugin.py:223: PytestRemovedIn9Warning: The (path: py.path.local) argument is deprecated, please use (file_path: pathlib.Path)
+see https://docs.pytest.org/en/latest/deprecations.html#py-path-local-arguments-for-hooks-replaced-with-pathlib-path
+  def pytest_collect_file(self, path, parent):
+========================================================================== test session starts ==========================================================================
+platform darwin -- Python 3.13.1, pytest-8.2.0, pluggy-1.5.0 -- /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR/my_env/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-6.0.0, pylint-0.21.0
+collected 30 items                                                                                                                                                      
+--------------------------------------------------------------------------------
+Linting files
+.............
+--------------------------------------------------------------------------------
+
+tests/__init__.py::PYLINT PASSED                                                                                                                                  [  3%]
+tests/test_calculation.py::PYLINT PASSED                                                                                                                          [  6%]
+tests/test_calculation.py::test_calculation_operations[x0-y0-add-expected0] PASSED                                                                                [ 10%]
+tests/test_calculation.py::test_calculation_operations[x1-y1-subtract-expected1] PASSED                                                                           [ 13%]
+tests/test_calculation.py::test_calculation_operations[x2-y2-multiply-expected2] PASSED                                                                           [ 16%]
+tests/test_calculation.py::test_calculation_operations[x3-y3-divide-expected3] PASSED                                                                             [ 20%]
+tests/test_calculation.py::test_calculation_operations[x4-y4-add-expected4] PASSED                                                                                [ 23%]
+tests/test_calculation.py::test_calculation_operations[x5-y5-subtract-expected5] PASSED                                                                           [ 26%]
+tests/test_calculation.py::test_calculation_operations[x6-y6-multiply-expected6] PASSED                                                                           [ 30%]
+tests/test_calculation.py::test_calculation_operations[x7-y7-divide-expected7] PASSED                                                                             [ 33%]
+tests/test_calculation.py::test_calculation_repr PASSED                                                                                                           [ 36%]
+tests/test_calculation.py::test_divide_by_zero PASSED                                                                                                             [ 40%]
+tests/test_calculations.py::PYLINT PASSED                                                                                                                         [ 43%]
+tests/test_calculations.py::test_add_calculation PASSED                                                                                                           [ 46%]
+tests/test_calculations.py::test_get_history PASSED                                                                                                               [ 50%]
+tests/test_calculations.py::test_clear_history PASSED                                                                                                             [ 53%]
+tests/test_calculations.py::test_get_latest PASSED                                                                                                                [ 56%]
+tests/test_calculations.py::test_find_by_operation PASSED                                                                                                         [ 60%]
+tests/test_calculations.py::test_get_latest_with_empty_history PASSED                                                                                             [ 63%]
+tests/test_calculator.py::PYLINT PASSED                                                                                                                           [ 66%]
+tests/test_calculator.py::test_addition PASSED                                                                                                                    [ 70%]
+tests/test_calculator.py::test_subtraction PASSED                                                                                                                 [ 73%]
+tests/test_calculator.py::test_multiplication PASSED                                                                                                              [ 76%]
+tests/test_calculator.py::test_division PASSED                                                                                                                    [ 80%]
+tests/test_operations.py::PYLINT PASSED                                                                                                                           [ 83%]
+tests/test_operations.py::test_operation_add PASSED                                                                                                               [ 86%]
+tests/test_operations.py::test_operation_subtract PASSED                                                                                                          [ 90%]
+tests/test_operations.py::test_operation_multiply PASSED                                                                                                          [ 93%]
+tests/test_operations.py::test_operation_divide PASSED                                                                                                            [ 96%]
+tests/test_operations.py::test_divide_by_zero PASSED                                                                                                              [100%]
+
+========================================================================== 30 passed in 2.92s ===========================================================================
+
+
+-> pytest --pylint --cov
+
+(my_env) krishnasathvikaganni@krishnas-MacBook-Air 3_LEVELS_OF_CALCULATOR % pytest --pylint --cov
+/Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR/my_env/lib/python3.13/site-packages/pytest_pylint/plugin.py:223: PytestRemovedIn9Warning: The (path: py.path.local) argument is deprecated, please use (file_path: pathlib.Path)
+see https://docs.pytest.org/en/latest/deprecations.html#py-path-local-arguments-for-hooks-replaced-with-pathlib-path
+  def pytest_collect_file(self, path, parent):
+========================================================================== test session starts ==========================================================================
+platform darwin -- Python 3.13.1, pytest-8.2.0, pluggy-1.5.0 -- /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR/my_env/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/krishnasathvikaganni/IS601_PROJECTS_2025/3_LEVELS_OF_CALCULATOR
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-6.0.0, pylint-0.21.0
+collected 30 items                                                                                                                                                      
+
+tests/__init__.py::PYLINT SKIPPED (file(s) previously passed pylint checks)                                                                                       [  3%]
+tests/test_calculation.py::PYLINT SKIPPED (file(s) previously passed pylint checks)                                                                               [  6%]
+tests/test_calculation.py::test_calculation_operations[x0-y0-add-expected0] PASSED                                                                                [ 10%]
+tests/test_calculation.py::test_calculation_operations[x1-y1-subtract-expected1] PASSED                                                                           [ 13%]
+tests/test_calculation.py::test_calculation_operations[x2-y2-multiply-expected2] PASSED                                                                           [ 16%]
+tests/test_calculation.py::test_calculation_operations[x3-y3-divide-expected3] PASSED                                                                             [ 20%]
+tests/test_calculation.py::test_calculation_operations[x4-y4-add-expected4] PASSED                                                                                [ 23%]
+tests/test_calculation.py::test_calculation_operations[x5-y5-subtract-expected5] PASSED                                                                           [ 26%]
+tests/test_calculation.py::test_calculation_operations[x6-y6-multiply-expected6] PASSED                                                                           [ 30%]
+tests/test_calculation.py::test_calculation_operations[x7-y7-divide-expected7] PASSED                                                                             [ 33%]
+tests/test_calculation.py::test_calculation_repr PASSED                                                                                                           [ 36%]
+tests/test_calculation.py::test_divide_by_zero PASSED                                                                                                             [ 40%]
+tests/test_calculations.py::PYLINT SKIPPED (file(s) previously passed pylint checks)                                                                              [ 43%]
+tests/test_calculations.py::test_add_calculation PASSED                                                                                                           [ 46%]
+tests/test_calculations.py::test_get_history PASSED                                                                                                               [ 50%]
+tests/test_calculations.py::test_clear_history PASSED                                                                                                             [ 53%]
+tests/test_calculations.py::test_get_latest PASSED                                                                                                                [ 56%]
+tests/test_calculations.py::test_find_by_operation PASSED                                                                                                         [ 60%]
+tests/test_calculations.py::test_get_latest_with_empty_history PASSED                                                                                             [ 63%]
+tests/test_calculator.py::PYLINT SKIPPED (file(s) previously passed pylint checks)                                                                                [ 66%]
+tests/test_calculator.py::test_addition PASSED                                                                                                                    [ 70%]
+tests/test_calculator.py::test_subtraction PASSED                                                                                                                 [ 73%]
+tests/test_calculator.py::test_multiplication PASSED                                                                                                              [ 76%]
+tests/test_calculator.py::test_division PASSED                                                                                                                    [ 80%]
+tests/test_operations.py::PYLINT SKIPPED (file(s) previously passed pylint checks)                                                                                [ 83%]
+tests/test_operations.py::test_operation_add PASSED                                                                                                               [ 86%]
+tests/test_operations.py::test_operation_subtract PASSED                                                                                                          [ 90%]
+tests/test_operations.py::test_operation_multiply PASSED                                                                                                          [ 93%]
+tests/test_operations.py::test_operation_divide PASSED                                                                                                            [ 96%]
+tests/test_operations.py::test_divide_by_zero PASSED                                                                                                              [100%]
+
+---------- coverage: platform darwin, python 3.13.1-final-0 ----------
+Name                         Stmts   Miss  Cover
+------------------------------------------------
+calculator/__init__.py          23      0   100%
+calculator/calculation.py       15      0   100%
+calculator/calculations.py      22      0   100%
+calculator/operations.py        11      0   100%
+tests/__init__.py                0      0   100%
+tests/test_calculation.py       16      0   100%
+tests/test_calculations.py      31      0   100%
+tests/test_calculator.py        13      0   100%
+tests/test_operations.py        21      0   100%
+------------------------------------------------
+TOTAL                          152      0   100%
+
+
+===================================================================== 25 passed, 5 skipped in 0.53s =====================================================================
