@@ -23,7 +23,7 @@ def test_calculation_repr():
     '''Test the string representation (__repr__) of the Calculation class.'''
     calc=Calculation(Decimal('29'), Decimal('13'), add)
     expected_repr="Calculation(29, 13, add)"
-    assert calc.__repr__() == expected_repr, "The __repr__ method is not matching the expected string."
+    assert repr(calc) == expected_repr, "The __repr__ method is not matching the expected string."
 
 def test_divide_by_zero():
     ''' Division by zero raises a Valueerror'''
@@ -31,4 +31,4 @@ def test_divide_by_zero():
     with pytest.raises(ValueError, match="Cannot be divided by Zero"):
         calc.perform()
 
-#End 
+#End
