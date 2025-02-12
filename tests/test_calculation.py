@@ -1,3 +1,4 @@
+'''The test_calculation.py module contains tests for the calculator operations and calculation class'''
 from decimal import Decimal
 import pytest
 from calculator.calculation import Calculation
@@ -14,15 +15,20 @@ from calculator.operations import add, subtract, multiply, divide
     (Decimal('39.3'), Decimal('0.3'), divide, Decimal('131'))
 ])
 def test_calculation_operations(x, y, operation, expected):
-    Cal = Calculation(x, y, operation)
-    assert Cal.perform() == expected, f"Failed {operation.__name__} operation with {x} and {y}"
+    '''Calculation operations with various cases'''
+    calc = Calculation(x, y, operation)
+    assert calc.perform() == expected, f"Failed {operation.__name__} operation with {x} and {y}"
 
 def test_calculation_repr():
-    Cal=Calculation(Decimal('29'), Decimal('13'), add)
+    '''Test the string representation (__repr__) of the Calculation class.'''
+    calc=Calculation(Decimal('29'), Decimal('13'), add)
     expected_repr="Calculation(29, 13, add)"
-    assert Cal.__repr__() == expected_repr, "The __repr__ method is not matching the expected string."
+    assert calc.__repr__() == expected_repr, "The __repr__ method is not matching the expected string."
 
 def test_divide_by_zero():
-    Cal=Calculation(Decimal('15'), Decimal('0'), divide)
+    ''' Division by zero raises a Valueerror'''
+    calc=Calculation(Decimal('15'), Decimal('0'), divide)
     with pytest.raises(ValueError, match="Cannot be divided by Zero"):
-        Cal.perform()
+        calc.perform()
+
+#End 
