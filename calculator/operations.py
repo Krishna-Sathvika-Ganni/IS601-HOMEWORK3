@@ -10,6 +10,6 @@ def multiply(x: Decimal,y: Decimal) -> Decimal:
     return x * y
 
 def divide(x: Decimal,y: Decimal) -> Decimal:
-    if y == 0:
+    if y == Decimal('0'):
         raise ValueError("Cannot be divided by Zero")
     return x / y
