@@ -18,7 +18,7 @@ def num_records(request):
     '''Adding fixture'''
     return request.config.getoption("--num_records")
 
-def generate_test_data(num_records)
+def generate_test_data(num_records):
     '''Defining operation mappings for both calculator and calculation tests'''
     operation_mappings = {
         'add': add,
