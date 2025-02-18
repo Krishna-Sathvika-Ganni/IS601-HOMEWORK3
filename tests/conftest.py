@@ -10,13 +10,15 @@ fake = Faker()
 
 # pylint: disable=unused-argument
 def pytest_addoption(parser):
+    '''Adding command-line options for pytest.'''
     parser.addoption("--num_records", action="store",default=5, type=int, help="Number of test records to generate")
 
 @pytest.fixture
+'''Adding fixture'''
 def num_records(request):
     return request.config.getoption("--num_records")
 
-def generate_test_data(num_records):
+def generate_test_data(num_records)
     '''Defining operation mappings for both calculator and calculation tests'''
     operation_mappings = {
         'add': add,
