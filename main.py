@@ -2,26 +2,26 @@ import sys
 from calculator import Calculator
 from decimal import Decimal, InvalidOperation
 
-def calculate_and_print(a, b, operation_name):
+def calculate_and_print(x, y, operation_name):
     operation_mappings = {
         'add': Calculator.add,
         'subtract': Calculator.subtract,
         'multiply': Calculator.multiply,
         'divide': Calculator.divide
     }
-    
+
     try:
-        a_decimal, b_decimal = map(Decimal, [a, b])
-        result = operation_mappings.get(operation_name) # Use get to handle unknown operations
+        x_decimal, y_decimal = map(Decimal, [x, y])
+        result = operation_mappings.get(operation_name) 
         if result:
-            print(f"The result of {a} {operation_name} {b} is equal to {result(a_decimal, b_decimal)}")
+            print(f"The result of {x} {operation_name} {y} is equal to {result(x_decimal, y_decimal)}")
         else:
             print(f"Unknown operation: {operation_name}")
     except InvalidOperation:
-        print(f"Invalid number input: {a} or {b} is not a valid number.")
+        print(f"Invalid number input: {x} or {y} is not a valid number.")
     except ZeroDivisionError:
         print("Error: Division by zero.")
-    except Exception as e: # Catch-all for unexpected errors
+    except Exception as e: 
         print(f"An error occurred: {e}")
 
 def main():
@@ -29,8 +29,8 @@ def main():
         print("Usage: python calculator_main.py <number1> <number2> <operation>")
         sys.exit(1)
     
-    _, a, b, operation = sys.argv
-    calculate_and_print(a, b, operation)
+    _, x, y, operation = sys.argv
+    calculate_and_print(x, y, operation)
 
 if __name__ == '__main__':
     main()
