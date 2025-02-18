@@ -1,15 +1,13 @@
 '''Configuration file to define fixtures and other configurations'''
-# pylint: disable=unused-argument
 
 from decimal import Decimal
-import pytest
 from faker import Faker
 from calculator.operations import add, subtract, multiply, divide
 
 fake = Faker()
 '''Initalizing the faker object'''
 
-def generating_test_data(num_records): 
+def generate_test_data(num_records):
     '''Defining operation mappings for both calculator and calculation tests'''
     operation_mappings = {
         'add': add,
@@ -35,9 +33,11 @@ def generating_test_data(num_records):
             expected = "ZeroDivisionError"
         yield x, y, operation_name, operation_func, expected
 
+    # pylint: disable=unused-argument
     def pytest_addoption(parser):
         parser.addoption("--num_records", action="store",default=5, type=int, help="Number of test records to generate")
 
+    # pylint: disable=unused-argument
     def pytest_generate_tests(metafunc):
         if {"x", "y", "expected"}.intersection(set(metafunc.fixturenames)):
             num_records = metafunc.config.getoption("num_records")
