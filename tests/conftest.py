@@ -27,7 +27,7 @@ def generating_test_data(num_records):
                 expected = "ZeroDivisionError"
             else:
                 expected = operation_func(x,y)
-        expect ZeroDivisionError:
+        except ZeroDivisionError:
             expected = "ZeroDivisionError"
         
         yield x, y, operation_name, operation_func, expected
