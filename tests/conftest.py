@@ -9,8 +9,8 @@ fake = Faker()
 '''Initalizing the faker object'''
 
 # pylint: disable=unused-argument
-    def pytest_addoption(parser):
-        parser.addoption("--num_records", action="store",default=5, type=int, help="Number of test records to generate")
+def pytest_addoption(parser):
+    parser.addoption("--num_records", action="store",default=5, type=int, help="Number of test records to generate")
 
 @pytest.fixture
 def num_records(request):
