@@ -2,10 +2,19 @@
 
 from decimal import Decimal
 from faker import Faker
+import pytest
 from calculator.operations import add, subtract, multiply, divide
 
 fake = Faker()
 '''Initalizing the faker object'''
+
+# pylint: disable=unused-argument
+    def pytest_addoption(parser):
+        parser.addoption("--num_records", action="store",default=5, type=int, help="Number of test records to generate")
+
+@pytest.fixture
+def num_records(request):
+    return request.config.getoption("--num_records")
 
 def generate_test_data(num_records):
     '''Defining operation mappings for both calculator and calculation tests'''
@@ -32,10 +41,6 @@ def generate_test_data(num_records):
         except ZeroDivisionError:
             expected = "ZeroDivisionError"
         yield x, y, operation_name, operation_func, expected
-
-    # pylint: disable=unused-argument
-    def pytest_addoption(parser):
-        parser.addoption("--num_records", action="store",default=5, type=int, help="Number of test records to generate")
 
     # pylint: disable=unused-argument
     def pytest_generate_tests(metafunc):
