@@ -8,9 +8,9 @@ fake = Faker() # Initalizing the faker object
 
 def generating_test_data(num_records):
     operation_mappings = {
-        'add': add
-        'subtract': subtract
-        'multiply': multiply
+        'add': add,
+        'subtract': subtract,
+        'multiply': multiply,
         'divide': divide
     }
 
