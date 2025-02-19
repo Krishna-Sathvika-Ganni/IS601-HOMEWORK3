@@ -4,6 +4,7 @@ import pytest
 from calculator.calculation import Calculation
 from calculator.operations import add, subtract, multiply, divide
 
+# pylint: disable=invalid-name
 def test_operation(x, y, operation, expected):
     '''Testing various operations'''
     calculation = Calculation.create(x, y, operation)
