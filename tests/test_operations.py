@@ -4,7 +4,7 @@ import pytest
 from calculator.calculation import Calculation
 from calculator.operations import add, subtract, multiply, divide
 
-ef test_operation(x, y, operation, expected):
+def test_operation(x, y, operation, expected):
     '''Testing various operations'''
     calculation = Calculation.create(x, y, operation)
     assert calculation.perform() == expected, f"{operation.__name__} operation failed"
