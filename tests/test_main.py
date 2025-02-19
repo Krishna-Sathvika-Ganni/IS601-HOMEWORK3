@@ -10,7 +10,7 @@ from main import calculate_and_print
     ("4", "0", 'divide', "An error occurred: Cannot be divided by Zero"),
     ("6", "3", 'unknown', "Unknown operation: unknown"),
     ("x", "3", 'add', "Invalid number input: x or 3 is not a valid number."),
-    ("5", "y", 'subtract', "Invalid number input: 5 or y is not a valid number.")  
+    ("5", "y", 'subtract', "Invalid number input: 5 or y is not a valid number.")
 ])
 def test_calculate_and_print(x_string, y_string, operation_string,expected_string, capsys):
     '''defining test_calculate_and_print'''
