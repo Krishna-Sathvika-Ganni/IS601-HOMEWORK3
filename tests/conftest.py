@@ -33,10 +33,10 @@ def generate_test_data(num_records):
         operation_name = fake.random_element(elements=list(operation_mappings.keys()))
         operation_func = operation_mappings[operation_name]
 
-        if operation_func is divide:
+        if operation_func == divide:
             y = Decimal('1') if y == Decimal('0') else y
         try:
-            if operation_func is divide and y == Decimal('0'):
+            if operation_func == divide and y == Decimal('0'):
                 expected = "ZeroDivisionError"
             else:
                 expected = operation_func(x,y)
