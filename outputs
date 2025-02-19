@@ -1,0 +1,21 @@
+Output of the main.py:
+
+(my_env) my_envkrishnasathvikaganni@krishnas-MacBook-Air IS601-HOMEWORK3-4 % python main.py 5 3 add
+The result of 5 add 3 is equal to 8
+(my_env) my_envkrishnasathvikaganni@krishnas-MacBook-Air IS601-HOMEWORK3-4 % python main.py 10 2 subtract
+The result of 10 subtract 2 is equal to 8
+(my_env) my_envkrishnasathvikaganni@krishnas-MacBook-Air IS601-HOMEWORK3-4 % python main.py 4 5 multiply
+The result of 4 multiply 5 is equal to 20
+(my_env) my_envkrishnasathvikaganni@krishnas-MacBook-Air IS601-HOMEWORK3-4 % python main.py 1 0 divide  
+An error occurred: Cannot be divided by Zero
+(my_env) my_envkrishnasathvikaganni@krishnas-MacBook-Air IS601-HOMEWORK3-4 % python main.py 9 3 unknown
+Unknown operation: unknown
+(my_env) my_envkrishnasathvikaganni@krishnas-MacBook-Air IS601-HOMEWORK3-4 % python main.py x 3 add    
+Invalid number input: x or 3 is not a valid number.
+(my_env) my_envkrishnasathvikaganni@krishnas-MacBook-Air IS601-HOMEWORK3-4 % python main.py 5 y subtract
+Invalid number input: 5 or y is not a valid number.
+(my_env) my_envkrishnasathvikaganni@krishnas-MacBook-Air IS601-HOMEWORK3-4 % python main.py 10 2 divide  
+The result of 10 divide 2 is equal to 5
+(my_env) my_envkrishnasathvikaganni@krishnas-MacBook-Air IS601-HOMEWORK3-4 % python main.p
+y
+Usage: python calculator_main.py <number1> <number2> <operation>
