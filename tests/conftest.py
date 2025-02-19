@@ -44,9 +44,9 @@ def generate_test_data(num_records):
             expected = "ZeroDivisionError"
         yield x, y, operation_name, operation_func, expected
 
-    # pylint: disable=unused-argument
-    def pytest_generate_tests(metafunc):
-        if {"x", "y", "expected"}.intersection(set(metafunc.fixturenames)):
-            num_records = metafunc.config.getoption("num_records")
-            parameters = list(generate_test_data(num_records))
-            metafunc.parametrize("x,y,operation,expected", parameters)
+# pylint: disable=unused-argument
+def pytest_generate_tests(metafunc):
+    if {"x", "y", "expected"}.intersection(set(metafunc.fixturenames)):
+        num_records = metafunc.config.getoption("num_records")
+        parameters = list(generate_test_data(num_records))
+        metafunc.parametrize("x,y,operation,expected", parameters)
