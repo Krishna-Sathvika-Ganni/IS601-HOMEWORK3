@@ -3,7 +3,7 @@
 from decimal import Decimal
 import pytest
 from calculator.calculation import Calculation
-from calculator.operations import add, subtract, multiply, divide
+from calculator.operations import add, divide
 
 def test_calculation_operations(x, y, operation, expected):
     '''Calculation operations with various cases'''
