@@ -12,6 +12,7 @@ from main import calculate_and_print
     ("5", "y", 'subtract', "Invalid number input: 5 or y is not a valid number.")  
 ])
 def test_calculate_and_print(x_string, y_string, operation_string,expected_string, capsys):
+    '''defining test_calculate_and_print'''
     calculate_and_print(x_string, y_string, operation_string)
     captured = capsys.readouterr()
     assert captured.out.strip() == expected_string
