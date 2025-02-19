@@ -37,15 +37,16 @@ def generate_test_data(num_records):
             y = Decimal('1') if y == Decimal('0') else y
         try:
             if operation_func == divide and y == Decimal('0'):
-                expected = "ZeroDivisionError"
+                expected = ZeroDivisionError
             else:
                 expected = operation_func(x,y)
         except ZeroDivisionError:
-            expected = "ZeroDivisionError"
+            expected = ZeroDivisionError
         yield x, y, operation_name, operation_func, expected
 
 # pylint: disable=unused-argument
 def pytest_generate_tests(metafunc):
+    '''Defining pytest_generate_tests'''
     if {"x", "y", "expected"}.intersection(set(metafunc.fixturenames)):
         num_records = metafunc.config.getoption("num_records")
         parameters = list(generate_test_data(num_records))
